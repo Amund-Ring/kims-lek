@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kims lek</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="game" class="easy">
+    <h1>Kims lek</h1>
+
+    <div id="top-panel">
+      <div id="difficulty-selector">
+        <input type="radio" name="difficulty" id="easy"   value="easy"   checked/>
+        <label for="easy">Enkel</label>
+
+        <input type="radio" name="difficulty" id="medium" value="medium"/>
+        <label for="medium">Middels</label>
+
+        <input type="radio" name="difficulty" id="hard"   value="hard"/>
+        <label for="hard">Ekspert</label>
+
+        <div class="selector-background"></div>
+      </div>
+
+      <div id="game-status" class="hidden">
+        <div class="top-bar">
+          <span id="left-info"></span>
+          <span id="score">Poeng: 0</span>
+          <button id="end-game-button">Avslutt</button>
+        </div>
+        <div id="countdown-bar">
+          <div id="countdown-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="board" class="grid"></div>
+
+    <div id="selection-area">
+      <div class="grid"></div>
+
+      <div id="selection-overlay">
+        <div id="game-ready">
+          <button id="start-button">Start spillet</button>
+          <p class="info-text">
+            Se nøye på brettet mens kortene vises! Etterpå velger du de riktige kortene fra dette panelet.
+          </p>
+        </div>
+
+        <div id="game-revealing" class="hidden">
+          <p class="info-text">Memoriser kortene på brettet nå!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
